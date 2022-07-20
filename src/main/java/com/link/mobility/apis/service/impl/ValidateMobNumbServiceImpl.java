@@ -24,11 +24,12 @@ public class ValidateMobNumbServiceImpl implements IValidateMobNumbService {
                 PhoneNumberUtil phoneUtil = PhoneNumberUtil.getInstance();
                 Phonenumber.PhoneNumber phoneNumber = phoneUtil.parse(data, MobilityConstants.REGION_CODE);
                 if(phoneUtil.isValidNumber(phoneNumber)){
-                    list.add(phoneNumber.getCountryCode()+""+phoneNumber.getNationalNumber());
+                    list.add("+"+phoneNumber.getCountryCode()+""+phoneNumber.getNationalNumber());
                 }else{
                     list.add("invalid");
                 }
             } catch (NumberParseException e) {
+                list.add("invalid");
                 LOGGER.error("Error at getValidMobNumbList " +e.getStackTrace());
             }
         });

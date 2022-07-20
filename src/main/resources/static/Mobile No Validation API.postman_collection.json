@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "be9d8faa-dca0-4329-a5fe-1b118d52be07",
+		"name": "Mobile No Validation API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sample 1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n\t\"numbers\":[\"+46709234893\",\"070-3306661\",\"0046709234893\",\"70543007\"] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/validate/mobile",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"validate",
+						"mobile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sample 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n\t\"numbers\":[\"+46709234893\",\"070-3306661\",\"0046709234893\",\"70543007\"] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/validate/mobile",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"validate",
+						"mobile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sample 3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n\t\"numbers\":[\"+46709234893\",\"070-3306661\",\"0046709234893\",\"70543007\"] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/validate/mobile",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"validate",
+						"mobile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
