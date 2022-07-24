@@ -6,10 +6,15 @@ import com.link.mobility.apis.service.impl.ValidateMobNumbServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("v1/validate")
+@Validated
 public class ValidateMobNumbController {
 
     private static final Logger LOGGER= LoggerFactory.getLogger(ValidateMobNumbServiceImpl.class);
@@ -22,11 +27,11 @@ public class ValidateMobNumbController {
     }
 
     @GetMapping("/mobile")
-    public PhoneNo validate(@RequestBody PhoneNo numbers){
+    public ResponseEntity<PhoneNo> validate(@Valid @RequestBody PhoneNo numbers){
         LOGGER.info("Inside ValidateMobNumbController.validate()");
         PhoneNo phoneNo=new PhoneNo();
         phoneNo.setNumbers(validateMobNumbService.getValidMobNumbList(numbers.getNumbers()));
-        return phoneNo;
+        return ResponseEntity.ok(phoneNo);
     }
 
 }
